@@ -10,13 +10,13 @@ export default {
 	mounted() {
 		// lazy load the required ArcGIS API for JavaScript modules and CSS
 		loadModules(['esri/Map', 'esri/views/MapView'], { css: true }).then(([ArcGISMap, MapView]) => {
-			const mapb = new ArcGISMap({
+			const mapc = new ArcGISMap({
 				basemap: 'topo-vector'
 			});
 			console.log(this);
 			this.view = new MapView({
 				container: 'map',
-				map: mapb,
+				map: mapc,
 				center: [-118, 34],
 				zoom: 8
 			});
